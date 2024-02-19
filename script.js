@@ -19,6 +19,7 @@ const chooseText = document.getElementById('chooseText');
 const yesNo = document.getElementById('yes-no');
 const boxes = document.getElementById('boxes');
 const main = document.getElementById('main');
+const video = document.getElementById('videoStress');
 
 // Song titles
 const songs = [
@@ -46,7 +47,7 @@ const songs = [
 let songIndex = 0;
 let isPlaying = false;
 let isMuted = false;
-let currentVolume;
+let currentVolume = 0.5;
 
 loadSong(songs[songIndex]);
 //playSong();
@@ -92,7 +93,11 @@ function Stressed() {
 }
 
 function No() {
-  window.location.assign("https://www.youtube.com/watch?v=16v2eojZ_l8");
+  //window.location.assign("https://www.youtube.com/watch?v=16v2eojZ_l8");
+  yesNo.style.display = "none";
+  greeting2.style.display = "none";
+  video.style.display = "flex";
+
 }
 
 function loadSong(song) {
@@ -169,7 +174,7 @@ playBtn.addEventListener('click', () => {
 
 volumeBtn.addEventListener('click', () => {
   if (isMuted) {
-      audio.volume = currentVolume;
+      audio.volume = parseFloat(currentVolume);
       volumeBtn.classList.remove('fa-volume-mute');
       volumeBtn.classList.add('fa-volume-down');
       isMuted = false;

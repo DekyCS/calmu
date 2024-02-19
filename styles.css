@@ -201,6 +201,8 @@ i:hover{
     width: 25vh;
     height: 25vh;
     margin: 15px;
+    border-radius: 30px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,16 +215,16 @@ i:hover{
 
 .box:hover {
     background-color: #9EC8B9;
-    animation: expand 1s;
+    animation: expand 0.4s;
 }
 
 .box img {
-    max-width: 150px;
+    max-width: 15vh;
     margin-bottom: 5px;
 }
 
 .box p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 @keyframes fade-in {
@@ -247,10 +249,10 @@ i:hover{
 
 @keyframes expand {
     0% {
-        transform: translateY(0%)
+        transform:scale(100%)
     }
     100% {
-        transform: translateY(100%);
+        transform:scale(110%);
     }
 }
 
@@ -330,4 +332,11 @@ i:hover{
 
 .no:hover {
     background-color: lightcoral;
+}
+
+.video {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50vh
 }
