@@ -201,6 +201,9 @@ i:hover{
     width: 25vh;
     height: 25vh;
     margin: 15px;
+}
+
+.boxes {
     display: none;
 }
 

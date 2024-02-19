@@ -15,7 +15,10 @@ const volumeBtn = document.getElementById('volume-btn');
 
 const greetingText = document.getElementById('greeting');
 const greeting2 = document.getElementById('greeting2');
+const chooseText = document.getElementById('chooseText');
 const yesNo = document.getElementById('yes-no');
+const boxes = document.getElementById('boxes');
+const main = document.getElementById('main');
 
 // Song titles
 const songs = [
@@ -69,7 +72,28 @@ setTimeout(function(){
   yesNo.style.opacity = "1";
 }, 3600);
 
+function Stressed() {
+  greeting2.classList.remove("fade-in");
+  greeting2.classList.add("fade-out");
+  yesNo.classList.remove("fade-in");
+  yesNo.classList.add("fade-out");
 
+  setTimeout(function() {
+    greeting2.style.display = "none";
+    yesNo.style.display = "none";
+    chooseText.style.display = "flex";
+    chooseText.classList.add("fade-in");
+
+    main.style.display = "flex";
+    main.style.flexDirection = "column";
+    boxes.style.display = "flex";
+    boxes.classList.add("fade-in");
+  }, 900);
+}
+
+function No() {
+
+}
 
 function loadSong(song) {
     title.innerText = song["title"];
