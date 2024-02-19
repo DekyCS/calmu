@@ -92,7 +92,7 @@ function Stressed() {
 }
 
 function No() {
-
+  window.location.assign("https://www.youtube.com/watch?v=16v2eojZ_l8");
 }
 
 function loadSong(song) {

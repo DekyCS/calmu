@@ -8,16 +8,16 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #222;
+    background-color: #1B4242;
     font-size: 14px;
 }
 
 .music-player {
     --primary-color: #ddd;
     --secondary-color: #999;
-    --green-color: #2d5;
+    --green-color: #9EC8B9;
     --padding: 1em;
-    background-color: #111;
+    background-color: #092635;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +197,7 @@ i:hover{
 }
 
 .box {
-    background-color: white;
+    background-color: #5C8374;
     width: 25vh;
     height: 25vh;
     margin: 15px;
@@ -208,7 +208,7 @@ i:hover{
 }
 
 .box:hover {
-    background-color: grey;
+    background-color: #9EC8B9;
 }
 
 @keyframes fade-in {
@@ -306,5 +306,5 @@ i:hover{
 }
 
 .no:hover {
-    background-color: #1db954;
+    background-color: lightcoral;
 }

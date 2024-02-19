@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify music player</title>
+        <link rel="stylesheet" href="./styles.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div id="main" class="main">
+            <div id="greeting" class="greeting">Hello my fellow student</div>
+            <div id="greeting2" class="greeting2">Are you stressed out?</div>
+            <div id="yes-no" class="yes-no">
+                <button class="yes" onclick="Stressed()">Yes</button>
+                <button class="no" onclick="No()">No</button>
+            </div>
+            <div id="chooseText" class="greeting2">Choose a relaxation technique</div>
+            <div id="boxes" class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="song-bar">
+                <div class="song-infos">
+                    <div class="image-container">
+                        <img id="cover" src="https://d2y6mqrpjbqoe6.cloudfront.net/image/upload/f_auto,q_auto/media/library-400/216_636967437355378335Your_Lie_Small_hq.jpg" alt="" />
+                    </div>
+                    <div class="song-description">
+                        <p class="title" id="title">
+                            Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
+                        </p>
+                        <p class="artist" id="artist">Masaru Yokoyama</p>
+                    </div>
+                </div>
+
+            <audio src="music/ukulele.mp3" id="audio"></audio>    
+
+            </div>
+            <div class="progress-controller">
+                <div class="control-buttons">
+                    <i id="prev" class="fas fa-step-backward"></i>
+                    <i id="play" class="play-pause fas fa-play"></i>
+                    <i id="next" class="fas fa-step-forward"></i>
+                </div>
+                <div class="progress-container">
+                    <span id="current">0:00</span>
+                    <div id="progressContainer" class="progress-bar">
+                        <div id="progressAudio" class="progress"></div>
+                    </div>
+                    <span id="duration">3:15</span>
+                </div>
+            </div>
+            <div class="other-features">
+                <div class="volume-bar">
+                    <i id="volume-btn" class="fas fa-volume-down"></i>
+                    <div id="audio-volume" class="progress-bar">
+                        <div id="audio-bar" class="progress-audio"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
