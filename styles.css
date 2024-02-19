@@ -201,6 +201,10 @@ i:hover{
     width: 25vh;
     height: 25vh;
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxes {
@@ -209,6 +213,16 @@ i:hover{
 
 .box:hover {
     background-color: #9EC8B9;
+    animation: expand 1s;
+}
+
+.box img {
+    max-width: 150px;
+    margin-bottom: 5px;
+}
+
+.box p {
+    font-size: 20px;
 }
 
 @keyframes fade-in {
@@ -228,6 +242,15 @@ i:hover{
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: translateY(0%)
+    }
+    100% {
+        transform: translateY(100%);
     }
 }
 
