@@ -93,7 +93,7 @@ function Stressed() {
     main.style.flexDirection = "column";
     boxes.style.display = "flex";
     boxes.classList.add("fade-in");
-  }, 900);
+  }, 850);
 }
 
 function No() {
@@ -105,15 +105,57 @@ function No() {
 }
 
 function Breathing() {
+  chooseText.classList.remove("fade-in");
+  chooseText.classList.add("fade-out");
+  boxes.classList.remove("fade-in");
+  boxes.classList.add("fade-out");
 
+  setTimeout(function() {
+    chooseText.style.display = "none";
+    boxes.style.display = "none";
+
+    chooseText.innerText = "Find a comfortable sitting position";
+    chooseText.classList.remove("fade-out");
+    chooseText.classList.add("fade-in");
+    chooseText.style.display = "flex";
+  }, 850);
+
+  setTimeout(function (){
+    chooseText.classList.add("fade-out");
+  }, 2850);
+
+  setTimeout(function() {
+    chooseText.display = "none";
+    chooseText.innerText = "Take a deep breath in";
+
+    chooseText.classList.remove("fade-out");
+    chooseText.classList.add("fade-in");
+    chooseText.style.display = "flex";
+  }, 3700)
 }
 
 function BodyScan() {
+  chooseText.classList.remove("fade-in");
+  chooseText.classList.add("fade-out");
+  boxes.classList.remove("fade-in");
+  boxes.classList.add("fade-out");
 
+  setTimeout(function() {
+    chooseText.style.display = "none";
+    boxes.style.display = "none";
+  }, 900);
 }
 
 function GuidedImagery() {
+  chooseText.classList.remove("fade-in");
+  chooseText.classList.add("fade-out");
+  boxes.classList.remove("fade-in");
+  boxes.classList.add("fade-out");
 
+  setTimeout(function() {
+    chooseText.style.display = "none";
+    boxes.style.display = "none";
+  }, 900);
 }
 
 function loadSong(song) {
