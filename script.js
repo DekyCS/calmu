@@ -21,25 +21,29 @@ const boxes = document.getElementById('boxes');
 const main = document.getElementById('main');
 const video = document.getElementById('videoStress');
 
+const breathing = document.getElementById('breathing');
+const bodyScan = document.getElementById('bodyScan');
+const guidedImagery = document.getElementById('guidedImagery');
+
 // Song titles
 const songs = [
     {
-        title:'hey',
-        artist:'boom',
-        audioFile: 'hey.mp3',
-        coverFile: 'hey.jpg'
+        title:'Try it On',
+        artist:'Interpol',
+        audioFile: 'tryiton.mp3',
+        coverFile: 'tryiton.jpg'
     },
     {
-        title:'summer',
-        artist:'voila',
-        audioFile: 'summer.mp3',
-        coverFile: 'summer.jpg'
+        title:'Stolen Dance',
+        artist:'Milky Chance',
+        audioFile: 'stolendance.mp3',
+        coverFile: 'stolendance.jpg'
     },
     {
-        title:'ukulele',
-        artist:'haha',
-        audioFile: 'ukulele.mp3',
-        coverFile: 'ukulele.jpg'
+        title:'Mice on Venus',
+        artist:'C418 Minecraft',
+        audioFile: 'miceonvenus.mp3',
+        coverFile: 'miceonvenus.jpg'
 
     }
 ]
@@ -97,6 +101,18 @@ function No() {
   yesNo.style.display = "none";
   greeting2.style.display = "none";
   video.style.display = "flex";
+
+}
+
+function Breathing() {
+
+}
+
+function BodyScan() {
+
+}
+
+function GuidedImagery() {
 
 }
 
@@ -222,3 +238,7 @@ audio.addEventListener('timeupdate', updateProgress);
 progressContainer.addEventListener('click', setProgress);
 
 audioVolume.addEventListener('click', changeVolume);
+
+breathing.addEventListener('click', Breathing);
+bodyScan.addEventListener('click', BodyScan);
+guidedImagery.addEventListener('click', GuidedImagery);

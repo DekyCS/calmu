@@ -1,5 +1,14 @@
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
+:root {
+    /*========== Colors ==========*/
+    --first-color: hsl(231, 44%, 56%);
+    --first-color-alt: hsl(231, 44%, 51%);
+    --text-color: hsl(231, 12%, 98%);
+    --body-color: hsl(231, 100%, 94%);
+  }
+  
+
 * {
     box-sizing: border-box;
     font-family: "circular std book", sans-serif;
@@ -207,7 +216,7 @@ i:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    }
 
 .boxes {
     display: none;
@@ -216,15 +225,27 @@ i:hover{
 .box:hover {
     background-color: #9EC8B9;
     animation: expand 0.4s;
+    animation-fill-mode: forwards;
 }
 
 .box img {
     max-width: 15vh;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .box p {
     font-size: 15px;
+    font-weight: 550;
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1.75rem);
+  }
 }
 
 @keyframes fade-in {
@@ -266,6 +287,7 @@ i:hover{
     color: white;
     font-size: 50px;
     display: none;
+    margin-bottom: 5px;
 
 }
 
